@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Price Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Flight Price Prediction</h1>
+    </header>
+    <main class="container">
+        <h2 class="subheading">Check Your Ticket Price!</h2>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="airline">Airline:</label>
+                <select name="airline" id="airline">
+                    <option value="SpiceJet">SpiceJet</option>
+                    <option value="AirAsia">AirAsia</option>
+                    <option value="Vistara">Vistara</option>
+                    <option value="GO_FIRST">GO FIRST</option>
+                    <option value="Indigo">Indigo</option>
+                    <option value="Air_India">Air India</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="source">Source City:</label>
+                <select name="source" id="source">
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Chennai">Chennai</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="departure">Departure Time:</label>
+                <select name="departure" id="departure">
+                    <option value="Evening">Evening</option>
+                    <option value="Early_Morning">Early Morning</option>
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Night">Night</option>
+                    <option value="Late_Night">Late Night</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="stops">Number of Stops:</label>
+                <select name="stops" id="stops">
+                    <option value="zero">Zero</option>
+                    <option value="one">One</option>
+                    <option value="two_or_more">Two or More</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="arrival">Arrival Time:</label>
+                <select name="arrival" id="arrival">
+                    <option value="Night">Night</option>
+                    <option value="Morning">Morning</option>
+                    <option value="Early_Morning">Early Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Evening">Evening</option>
+                    <option value="Late_Night">Late Night</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination City:</label>
+                <select name="destination" id="destination">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Delhi">Delhi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="class">Class:</label>
+                <select name="class" id="class">
+                    <option value="Economy">Economy</option>
+                    <option value="Business">Business</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration (in hours):</label>
+                <input type="number" step="0.01" name="duration" id="duration" required>
+            </div>
+            <div class="form-group">
+                <label for="days_left">Days Left Before Departure:</label>
+                <input type="number" name="days_left" id="days_left" required>
+            </div>
+            <button type="submit">Check Price</button>
+        </form>
+        {% if prediction_text %}
+            <div class="prediction-box">{{ prediction_text }}</div>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Flight Price Prediction</p>
+    </footer>
+</body>
+</html>
 
