@@ -1,1 +1,117 @@
+/* General Styling */
+body {
+    background: linear-gradient(135deg, #2c003e, #4b0082);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center; 
+    align-items: center; 
 
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main Container */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Container */
+.container {
+    background: rgba(255, 228, 196, 0.9); 
+    padding: 30px; 
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px; 
+}
+
+/* Subheading */
+.subheading {
+    font-size: 28px; 
+    font-weight: bold;
+    color: rgb(72, 0, 255); 
+    margin-bottom: 20px; 
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    color: #4B0082; 
+}
+
+/* Select & Input Fields */
+select, input {
+    width: 100%; /* Full width */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(139, 69, 19, 0.5); 
+    background: rgba(255, 228, 196, 0.5); 
+    color: #333; 
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Placeholder Color */
+input::placeholder {
+    color: rgba(51, 51, 51, 0.7); 
+}
+
+/* Select Hover & Focus */
+select:hover, select:focus, input:hover, input:focus {
+    border-color: #8B0000; /* Dark maroon on hover/focus */
+    box-shadow: 0 0 5px rgba(139, 0, 0, 0.6);
+}
+
+/* Button */
+button {
+    background: linear-gradient(90deg, #4B0082, #8B0000); 
+    color: #FFF; 
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #8B0000, #4B0082); 
+    transform: scale(1.05);
+}
+
+/* Prediction Box */
+.prediction-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; 
+    border: 2px solid #8B0000; 
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+}}
