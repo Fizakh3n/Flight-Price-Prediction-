@@ -48,7 +48,7 @@ A regression-based machine learning project to predict flight prices based on tr
 
 ## ➤ Results
 
-- Best Model: Random Forest Regressor
+- Best Model: XGBRegressor
 - Achieved R² Score: *e.g., 0.83*
 ---
 
